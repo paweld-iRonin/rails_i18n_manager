@@ -24,8 +24,8 @@ table.table.table-striped.table-hover.space-above3.list-table
     tr
       th = sort_link(:app_name)
       th = sort_link(:key)
-      th English Translation
       th Default Translation
+      th English Translation
       - if params[:status] == "Inactive"
         th Status
       th = sort_link(:updated_at)
@@ -35,8 +35,8 @@ table.table.table-striped.table-hover.space-above3.list-table
       tr
         td = x.translation_app.name
         td = x.key
-        td = x.english_translation
         td = x.default_translation
+        td = x.english_translation
         - if params[:status] == "Inactive"
           td Inactive
         td = x.updated_at&.strftime("%Y-%m-%d %l:%M %p")
