@@ -24,6 +24,7 @@ table.table.table-striped.table-hover.space-above3.list-table
     tr
       th = sort_link(:app_name)
       th = sort_link(:key)
+      th English Translation
       th Default Translation
       - if params[:status] == "Inactive"
         th Status
@@ -34,6 +35,7 @@ table.table.table-striped.table-hover.space-above3.list-table
       tr
         td = x.translation_app.name
         td = x.key
+        td = x.english_translation
         td = x.default_translation
         - if params[:status] == "Inactive"
           td Inactive

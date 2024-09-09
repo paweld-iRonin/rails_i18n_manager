@@ -41,6 +41,10 @@ module RailsI18nManager
       @default_translation = self.translation_values.detect{|x| x.locale == translation_app.default_locale.to_s }&.translation
     end
 
+    def english_translation
+      self.translation_values.detect{ |x| x.locale == "en" }&.translation
+    end
+
     def any_missing_translations?
       self.translation_app.all_locales.any? do |locale|
         val_record = translation_values.detect{|x| x.locale == locale.to_s}
