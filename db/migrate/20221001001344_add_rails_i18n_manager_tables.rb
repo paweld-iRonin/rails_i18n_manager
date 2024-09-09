@@ -5,6 +5,7 @@ class AddRailsI18nManagerTables < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :default_locale
       t.text :additional_locales
+      t.string :comparison_locale
       t.timestamps
     end
 

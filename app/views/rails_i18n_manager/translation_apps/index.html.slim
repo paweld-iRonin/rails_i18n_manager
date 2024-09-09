@@ -15,6 +15,7 @@ table.table.table-striped.table-hover.space-above3.list-table
     tr
       th = sort_link(:name)
       th Default Locale
+      th Comparison locale
       th Additional Locales
       th Actions
   tbody
@@ -22,6 +23,7 @@ table.table.table-striped.table-hover.space-above3.list-table
       tr
         td = x.name
         td = x.default_locale
+        td = x.comparison_locale
         td = x.additional_locales_array.join(", ")
         td
           = link_to "Edit", {action: :edit, id: x.id}

@@ -12,6 +12,8 @@ module RailsI18nManager
         sort = params[:sort]
       end
 
+      @translation_app = TranslationApp.first
+
       @translation_keys = TranslationKey
         .includes(:translation_app, :translation_values)
         .references(:translation_app)

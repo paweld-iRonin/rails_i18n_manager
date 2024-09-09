@@ -41,8 +41,8 @@ module RailsI18nManager
       @default_translation = self.translation_values.detect{|x| x.locale == translation_app.default_locale.to_s }&.translation
     end
 
-    def english_translation
-      self.translation_values.detect{ |x| x.locale == "en" }&.translation
+    def comparison_translation
+      self.translation_values.detect { |x| x.locale == translation_app.comparison_locale.to_s }&.translation
     end
 
     def any_missing_translations?
